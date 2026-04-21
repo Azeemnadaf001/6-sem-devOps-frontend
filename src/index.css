@@ -84,15 +84,23 @@ a {
   height: 24px;
 }
 
-.nav-link {
-  font-size: 14px;
-  font-weight: 500;
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   color: var(--text-muted);
   transition: color 0.2s;
 }
 
-.nav-link:hover {
+.nav-icon:hover {
   color: var(--text);
+}
+
+.nav-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .cart-link {
