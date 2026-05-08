@@ -6,7 +6,8 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:3000",
+        target:
+          "http://ec2-13-201-115-29.ap-south-1.compute.amazonaws.com:3000",
         changeOrigin: true,
       },
     },
