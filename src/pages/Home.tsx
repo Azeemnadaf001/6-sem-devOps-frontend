@@ -25,7 +25,7 @@ export default function Home() {
       </section>
 
       <section className="products-section">
-        <h2>Featured Products</h2>
+        <h2>Featured Products - Automated Deployment ✨</h2>
         {loading ? (
           <div className="loading">Loading...</div>
         ) : error ? (
