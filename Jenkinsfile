@@ -12,8 +12,9 @@ pipeline {
             steps {
                 sh '''
                     ssh -i ${EC2_KEY} -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} "
+                        rm -rf ~/ecommerce
+                        git clone https://github.com/Azeemnadaf001/sem-06-devOps-project.git ~/ecommerce
                         cd ~/ecommerce
-                        git pull origin main
                         docker compose up -d --build frontend
                         echo 'Frontend deployment completed successfully'
                     "
