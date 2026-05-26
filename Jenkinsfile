@@ -21,7 +21,7 @@ pipeline {
                 script {
                     sh '''
                         # Deploy with proper error handling
-                        ssh -i ${EC2_KEY} -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} << 'EOF'
+                        ssh -i ${EC2_KEY} -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} << EOF
                             set -e  # Exit on any error
                             
                             echo "=== Starting frontend deployment ==="
