@@ -25,15 +25,24 @@ export default function Home() {
       </section>
 
       <section className="products-section">
-        <h2>Featured Products</h2>
+        <div className="section-header">
+          <h2>Featured Products</h2>
+          <p className="section-subtitle">
+            Latest tech essentials curated for you
+          </p>
+        </div>
         {loading ? (
           <div className="loading">Loading...</div>
         ) : error ? (
           <div className="error">{error}</div>
         ) : (
           <div className="product-grid">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
+            {products.map((product, index) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                featured={index < 3}
+              />
             ))}
           </div>
         )}
