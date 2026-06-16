@@ -19,7 +19,7 @@ export default function Home() {
     <div className="page">
       <section className="banner">
         <div className="banner-content">
-          <h1>Premium Gears</h1>
+          <h1>Premium Gears Unlimited</h1>
           <p>Elevate your setup with curated tech essentials</p>
         </div>
       </section>
